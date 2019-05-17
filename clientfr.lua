@@ -11,6 +11,11 @@ end)
 
 
 Citizen.CreateThread(function()
+  local dict = "anim@mp_player_intmenu@key_fob@"
+  RequestAnimDict(dict)
+  while not HasAnimDictLoaded(dict) do
+      Citizen.Wait(0)
+  end
   while true do
     Citizen.Wait(0)
 	if (IsControlJustPressed(1, 303)) then
@@ -58,11 +63,17 @@ Citizen.CreateThread(function()
 							SetVehicleDoorsLocked(carstrie[i], 2)
 							PlayVehicleDoorCloseSound(carstrie[i], 1)
 							ESX.ShowNotification('Vous avez ~r~verrouillé~s~ votre ~y~'..vehicleLabel..'~s~.')
+							if not IsPedInAnyVehicle(PlayerPedId(), true) then
+								TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
+							end
 							hasAlreadyLocked = true
 						elseif lock == 2 then
 							SetVehicleDoorsLocked(carstrie[i], 1)
 							PlayVehicleDoorOpenSound(carstrie[i], 0)
 							ESX.ShowNotification('Vous avez ~g~déverrouillé~s~ votre ~y~'..vehicleLabel..'~s~.')
+							if not IsPedInAnyVehicle(PlayerPedId(), true) then
+								TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
+							end
 							hasAlreadyLocked = true
 						end
 					else
