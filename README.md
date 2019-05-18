@@ -6,7 +6,7 @@ This is another kind of carlock script. You need es_extended (https://github.com
 # Requires 1:
 1. https://github.com/ESX-Org/es_extended  UPDATE LAST VERSION
 # Requires 2:
-2.https://github.com/ESX-Org/esx_vehicleshop
+2. https://github.com/ESX-Org/esx_vehicleshop
 
 # Installation:
 1. Download zip from here https://github.com/sprixGG/esx_carlock/archive/master.zip
