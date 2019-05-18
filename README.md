@@ -4,7 +4,7 @@ This is another kind of carlock script. You need es_extended (https://github.com
 
 
 # Requires:
-1.https://github.com/ESX-Org/es_extended  ¡UPDATE LAST VERSION!
+1. https://github.com/ESX-Org/es_extended  ¡UPDATE LAST VERSION!
 2.https://github.com/ESX-Org/esx_vehicleshop
 
 # Installation:
