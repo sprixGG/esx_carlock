@@ -66,6 +66,13 @@ Citizen.CreateThread(function()
 							if not IsPedInAnyVehicle(PlayerPedId(), true) then
 								TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 							end
+							SetVehicleLights(carstrie[i], 2)
+							Citizen.Wait(150)
+							SetVehicleLights(carstrie[i], 0)
+							Citizen.Wait(150)
+							SetVehicleLights(carstrie[i], 2)
+							Citizen.Wait(150)
+							SetVehicleLights(carstrie[i], 0)
 							hasAlreadyLocked = true
 						elseif lock == 2 then
 							SetVehicleDoorsLocked(carstrie[i], 1)
@@ -74,6 +81,13 @@ Citizen.CreateThread(function()
 							if not IsPedInAnyVehicle(PlayerPedId(), true) then
 								TaskPlayAnim(PlayerPedId(), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 							end
+							SetVehicleLights(carstrie[i], 2)
+							Citizen.Wait(150)
+							SetVehicleLights(carstrie[i], 0)
+							Citizen.Wait(150)
+							SetVehicleLights(carstrie[i], 2)
+							Citizen.Wait(150)
+							SetVehicleLights(carstrie[i], 0)
 							hasAlreadyLocked = true
 						end
 					else
